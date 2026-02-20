@@ -8,5 +8,12 @@ services:
     ports:
       - "31001:8080"
     environment:
-      - MANAGEMENT_OTLP_TRACING_ENDPOINT=http://178.128.80.186:30006/v1/traces
-      - LOKI_URL=http://178.128.80.186:30003/loki/api/v1/push
+      - MANAGEMENT_OTLP_TRACING_ENDPOINT=http://alloy-altem:4318/v1/traces
+      - LOKI_URL=http://loki-altem:3100/loki/api/v1/push
+    networks:
+      - monitoring
+
+networks:
+  monitoring:
+    external: true
+    name: monitoring
