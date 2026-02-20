@@ -1,9 +1,9 @@
 services:
-  spring-boot-observability:
+  spring-boot-observability-altem:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: spring-boot-observability-container
+    container_name: spring-boot-observability-altem
     restart: always
     ports:
       - "31001:8080"

@@ -16,10 +16,7 @@ spring:
       mode: always
   h2:
     console:
-      enabled: true
-      path: /h2-console
-      settings:
-        web-allow-others: true
+      enabled: false
 
 server:
   port: 8080 # Default Spring Boot application port
