@@ -18,6 +18,8 @@ spring:
     console:
       enabled: true
       path: /h2-console
+      settings:
+        web-allow-others: true
 
 server:
   port: 8080 # Default Spring Boot application port
@@ -31,9 +33,9 @@ management:
     web:
       exposure:
         include: "*"
-  zipkin:
+  otlp:
     tracing:
-      endpoint: ${MANAGEMENT_ZIPKIN_TRACING_ENDPOINT:http://tempo-altem:9411/api/v2/spans}
+      endpoint: ${MANAGEMENT_OTLP_TRACING_ENDPOINT:http://alloy-altem:4318/v1/traces}
   endpoint:
     health:
       show:

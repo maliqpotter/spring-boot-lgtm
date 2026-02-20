@@ -8,5 +8,5 @@ services:
     ports:
       - "31001:8080"
     environment:
-      - MANAGEMENT_ZIPKIN_TRACING_ENDPOINT=http://178.128.80.186:9411/api/v2/spans
-      - LOKI_URL=http://178.128.80.186:3100/loki/api/v1/push
+      - MANAGEMENT_OTLP_TRACING_ENDPOINT=http://<ALLOY_IP>:30006/v1/traces
+      - LOKI_URL=http://<LOKI_IP>:30003/loki/api/v1/push
